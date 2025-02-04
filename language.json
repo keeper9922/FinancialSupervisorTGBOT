@@ -1,0 +1,85 @@
+{
+  "ru": [
+    {
+      "start": {
+        "error_answer_text": "Возникла ошибка при выполнении команды.",
+        "answer_text1": "Приветствую. Я - ваш финансовый помощник.\n",
+        "answer_text2": "Помогу контролировать ваши траты, удобно отсортирую их и позволю вам их анализировать. ",
+        "answer_text3": "Для быстрого начала, можете просто отправлять в чат суммы, потраченные за указанный период времени. По умолчанию, вводимые числа суммируются.",
+        "answer_text4": "\nСписок команд для операций с суммами: /menu."
+      },
+      "menu": {
+        "error_answer_text": "Возникла ошибка при выполнении команды.",
+        "answer_text1": "\uD83D\uDCCE*Выберите желаемую функцию:*\n",
+        "answer_text2": "\uD83D\uDCC8Вывод потраченных средств за сегодня: /print\n",
+        "answer_text3": "\uD83D\uDDD3Или за отдельную дату: /print год-месяц-день\n",
+        "answer_text4": "(Например: `/print %s`)\n",
+        "answer_text5": "\uD83D\uDCB0Вывод всего потраченных средств: /print\\_total\n",
+        "answer_text6": "\uD83D\uDCC6Вывод периодов (для формата дат): /periods\n",
+        "answer_text7": "\uD83D\uDCCAВывод потраченных средств за период:\n",
+        "answer_text8": "/print\\_period от:`год-месяц-день` до:`год-месяц-день`\n",
+        "answer_text9": "(Например: `/print_period %s %s`)"
+      },
+      "print": {
+        "error_answer_text": "Возникла ошибка при выполнении запроса.",
+        "answer_text1": "Ваши потраченные средства за указанное время: %d рублей"
+      },
+      "print_total": {
+        "error_answer_text": "Возникла ошибка при выполнении запроса.",
+        "answer_text1": "Ваши потраченные средства за всё время: %d рублей"
+      },
+      "print_period": {
+        "error_answer_text": "Возникла ошибка при выполнении запроса. Возможно вы указали аргументы в неверном формате.\nПример: /print_period %s %s",
+        "answer_text1": "Ваши потраченные средства за указанный период: %d рублей"
+      },
+      "periods": {
+        "error_answer_text": "Возникла ошибка при выполнении запроса.",
+        "answer_text1": "[[%s]]: %d рублей потрачено за `%s`\\n"
+      },
+      ".message": {
+        "error_answer_text": "Возможно, вы допустили ошибку при вводе команды. Я работаю только с численными значениями!",
+        "answer_text1": "✍Записываю!"
+      }
+    }
+  ],
+  "en":[
+    {
+      "menu":{
+        "error_answer_text": "Error occurred while executing command.",
+        "answer_text1": "\uD83D\uDCCE*Choose function:*\n",
+        "answer_text2": "\uD83D\uDCC8Print spent money for today: /print\n",
+        "answer_text3": "\uD83D\uDDD3Or for exact day: /print year-month-day\n",
+        "answer_text4": "(Example: `/print %s`)\n",
+        "answer_text5": "\uD83D\uDCB0Print total spent: /print\\_total\n",
+        "answer_text6": "\uD83D\uDCC6Print periods (for formatting and spectating spent money): /periods\n",
+        "answer_text7": "\uD83D\uDCCAPrint spent money for chosen period:\n",
+        "answer_text8": "/print\\_period from:`year-month-day` to:`year-month-day`\n",
+        "answer_text9": "(Example: `/print_period %s %s`)"
+      },
+      "start": {
+        "error_answer_text": "Error occurred while executing command.",
+        "answer_text1": "Greetings! I am your financial supervisor. I'll help you controlling your spending, sort them and allow you analise them. For fast start you could just send here your spent amounts for today. All entered amounts are summed. Commands: /menu"
+      },
+      "print": {
+        "error_answer_text": "Error occurred during request.",
+        "answer_text1": "Your spent money: %d "
+      },
+      "print_total": {
+        "error_answer_text": "Error occurred during request.",
+        "answer_text1": "Your total spent money: %d рублей"
+      },
+      "print_period": {
+        "error_answer_text": "Error occurred during request. Maybe you gave arguments in wrong format.\nExample: /print_period %s %s",
+        "answer_text1": "Your spent money for chosen period: %d рублей"
+      },
+      "periods": {
+        "error_answer_text": "Error occurred during request.",
+        "answer_text1": "[[%s]]: %d spent `%s`\\n"
+      },
+      ".message": {
+        "error_answer_text": "Maybe, you have tiled the command wrong, or tried to text me something. I work only with numbers!",
+        "answer_text1": "✍Writing!"
+      }
+    }
+  ]
+}
