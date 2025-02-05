@@ -1,8 +1,29 @@
+# First steps
+## Installing python
+> [!NOTE]
+> You better use virtual env for that. Follow this guide on official website: https://docs.python.org/3/library/venv.html
+
+Bot was written on Python 3.13, but I think it would perfectly run on all versions above 3.10.0.
+Install it [here.](https://python.org)
+
+## Bot setup
+You want to find bot named [@BotFather](https://t.me/BotFather) in telegram.
+Then follow instructions and you should get your bot **token**.
+
+<img alt="img.png" height="" src="img.png" width="719"/>
+
+Now you can edit your bot there!
+# Installing
+Then you can freely install entire repository, or clone it with git:
+```bash
+git clone https://github.com/keeper9922/FinancialSupervisorTGBOT.git
+cd FinancialSupervisorTGBOT
+```
 To install all modules, that used in the project, you want to run:
 `pip install -r requirements.txt` in terminal.
 ## How to configure bot?
-It is very easy. You want to edit `.env` file. It's insides should look like this:
-```
+It is very easy. You want to edit `.env` file (or you can create one). It's insides should look like this:
+```env
 TOKEN=your_token
 DATABASE=data.db
 LANGUAGE=EN
