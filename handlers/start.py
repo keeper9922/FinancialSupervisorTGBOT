@@ -1,6 +1,8 @@
 import datetime
+from mailbox import FormatError
 
 from aiogram import Router
+from aiogram.exceptions import TelegramBadRequest
 from aiogram.filters import CommandStart, Command, CommandObject
 from aiogram.types import Message, ChatMemberUpdated
 from create_bot import database, translation
@@ -74,7 +76,7 @@ async def cmd_print(message: Message):
         for i in range(len(result)):
             formated_result += translation.command_translation('periods')['success'] % (i, result[i][0], str(result[i][1]))
         await message.answer(formated_result, parse_mode= "Markdown")
-    except IndexError:
+    except TelegramBadRequest:
         await message.answer(translation.command_translation('periods')['success'] % (0, 0, datetime.date.today()))
     except Exception as error:
         print(error)

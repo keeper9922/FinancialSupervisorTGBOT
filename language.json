@@ -62,15 +62,15 @@
       },
       "print": {
         "error_answer_text": "Error occurred during request.",
-        "answer_text1": "Your spent money: %d "
+        "answer_text1": "Your spent money: %d $"
       },
       "print_total": {
         "error_answer_text": "Error occurred during request.",
-        "answer_text1": "Your total spent money: %d рублей"
+        "answer_text1": "Your total spent money: %d $"
       },
       "print_period": {
         "error_answer_text": "Error occurred during request. Maybe you gave arguments in wrong format.\nExample: /print_period %s %s",
-        "answer_text1": "Your spent money for chosen period: %d рублей"
+        "answer_text1": "Your spent money for chosen period: %d $"
       },
       "periods": {
         "error_answer_text": "Error occurred during request.",
