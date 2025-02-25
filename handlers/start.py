@@ -45,6 +45,9 @@ async def cmd_print(message: Message):
     try:
         result = await database.get_total_finances(message.from_user.id)
         await message.answer(translation.command_translation('print_total')['success'] % result)
+    except IndexError as i_e:
+        print(i_e)
+        await message.answer(translation.command_translation('print_total')['success'] % 0)
     except Exception as e:
         print(e)
         await message.answer(translation.command_translation('print_total')['error'])
