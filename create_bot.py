@@ -8,10 +8,10 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from db_handler import db_class
 from lang import Language
 
-translation = Language(config('language'), config('language_file'))
+translation = Language(config('LANGUAGE'), config('LANGUAGE_FILE'))
 database = db_class.DatabaseHandler(config('DATABASE'))
 scheduler = AsyncIOScheduler(timezone='Europe/Moscow')
-admins = [int(admin_id) for admin_id in config('ADMINS').split(',')]
+# admins = [int(admin_id) for admin_id in config('ADMINS').split(',')]
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
