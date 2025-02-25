@@ -34,7 +34,7 @@
       },
       "periods": {
         "error_answer_text": "Возникла ошибка при выполнении запроса.",
-        "answer_text1": "[[%s]]: %d рублей потрачено за `%s`\\n"
+        "answer_text1": "[[%s]]: %d рублей потрачено за `%s`\n"
       },
       ".message": {
         "error_answer_text": "Возможно, вы допустили ошибку при вводе команды. Я работаю только с численными значениями!",
@@ -74,7 +74,7 @@
       },
       "periods": {
         "error_answer_text": "Error occurred during request.",
-        "answer_text1": "[[%s]]: %d spent `%s`\\n"
+        "answer_text1": "[[%s]]: %d spent `%s`\n"
       },
       ".message": {
         "error_answer_text": "Maybe, you have tiled the command wrong, or tried to text me something. I work only with numbers!",
