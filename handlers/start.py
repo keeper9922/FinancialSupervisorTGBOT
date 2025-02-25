@@ -36,6 +36,8 @@ async def cmd_print(message: Message, command: CommandObject):
         else:
             result = await database.get_total_finances_by_date(message.from_user.id)
         await message.answer(translation.command_translation('print')['success'] % result)
+    except IndexError:
+        await message.answer(translation.command_translation('print')['success'] % 0)
     except Exception as e:
         print(e)
         await message.answer(translation.command_translation('print')['error'])
@@ -45,8 +47,7 @@ async def cmd_print(message: Message):
     try:
         result = await database.get_total_finances(message.from_user.id)
         await message.answer(translation.command_translation('print_total')['success'] % result)
-    except IndexError as i_e:
-        print(i_e)
+    except IndexError:
         await message.answer(translation.command_translation('print_total')['success'] % 0)
     except Exception as e:
         print(e)
@@ -59,7 +60,10 @@ async def cmd_print(message: Message, command: CommandObject):
         print(args)
         result = await database.get_total_finances_period(message.from_user.id, args[0], args[1])
         await message.answer(translation.command_translation('print_period')['success'] % result)
-    except Exception:
+    except IndexError:
+        await message.answer(translation.command_translation('print_period')['success'] % 0)
+    except Exception as e:
+        print(e)
         await message.answer(translation.command_translation('print_period')['error'] % (str(datetime.date.today()-datetime.timedelta(days=1)), str(datetime.date.today())))
 
 @money_router.message(Command('periods'))
@@ -70,6 +74,8 @@ async def cmd_print(message: Message):
         for i in range(len(result)):
             formated_result += translation.command_translation('periods')['success'] % (i, result[i][0], str(result[i][1]))
         await message.answer(formated_result, parse_mode= "Markdown")
+    except IndexError:
+        await message.answer(translation.command_translation('periods')['success'] % (0, 0, datetime.date.today()))
     except Exception as error:
         print(error)
         await message.answer(translation.command_translation('periods')['error'])
