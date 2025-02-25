@@ -70,7 +70,7 @@ async def cmd_print(message: Message, command: CommandObject):
 async def cmd_print(message: Message):
     try:
         result = await database.get_finances(message.from_user.id)
-        formated_result = "Вывод периодов:\n"
+        formated_result = ""
         for i in range(len(result)):
             formated_result += translation.command_translation('periods')['success'] % (i, result[i][0], str(result[i][1]))
         await message.answer(formated_result, parse_mode= "Markdown")
