@@ -1,5 +1,5 @@
 import asyncio
-from create_bot import bot, dp, scheduler, database
+from create_bot import bot, dp, database
 from handlers.start import start_router, money_router
 
 async def main():
