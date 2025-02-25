@@ -19,8 +19,21 @@ Then you can freely install entire repository, or clone it with git:
 git clone https://github.com/keeper9922/FinancialSupervisorTGBOT.git
 cd FinancialSupervisorTGBOT
 ```
-To install all modules, that used in the project, you want to run:
+To install all modules, that used in the project, run:
 `pip install -r requirements.txt` in terminal.
+### How to do it with venv?
+Windows:
+```commandline
+venv/bin/activate
+pip install -r requirements.txt
+deactivate
+```
+Unix/MacOS:
+```commandline
+source venv/bin/activate
+pip install -r requirements.txt
+deactivate
+```
 ## How to configure bot?
 It is very easy. You want to edit `.env` file (or you can create one). It's insides should look like this:
 ```env
