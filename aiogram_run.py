@@ -1,11 +1,8 @@
 import asyncio
 from create_bot import bot, dp, scheduler, database
 from handlers.start import start_router, money_router
-from work_time.time_func import send_time_msg
 
 async def main():
-    # scheduler.add_job(send_time_msg, 'interval', seconds=10)
-    # scheduler.start()
     await database.init()
     dp.include_router(start_router)
     dp.include_router(money_router)
